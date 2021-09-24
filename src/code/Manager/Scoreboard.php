@@ -35,6 +35,7 @@ final class Scoreboard
 
         $entrys = [$entry1, $entry2, $entry3, $entry4, $entry5, $entry6, $entry7, $entry8, $entry9, $entry10, $entry11];
         foreach ($entrys as $entry) {
+            $scoreboard->removeEntry($entry, [$player]);
             $scoreboard->addEntry($entry, [$player]);
             $scoreboard->updateEntry($entry, [$player]);
         }

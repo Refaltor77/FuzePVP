@@ -5,16 +5,13 @@ namespace code\Task;
 use code\Manager\Scoreboard;
 use jasonwynn10\ScoreboardAPI\ScoreboardAPI;
 use onebone\economyapi\EconomyAPI;
-use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerDeathEvent;
-use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\Player;
 use pocketmine\scheduler\Task;
 use pocketmine\Server;
 
 class PlayerTask extends Task
 {
-    private $player;
+    private Player $player;
 
     public function __construct(Player $player)
     {

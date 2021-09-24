@@ -3,6 +3,7 @@
 namespace code;
 
 use code\Lib\muqsit\invmenu\InvMenuHandler;
+use code\Task\ScoreboardTask;
 use pocketmine\plugin\PluginBase;
 
 class FuzePVP extends PluginBase
@@ -17,6 +18,7 @@ class FuzePVP extends PluginBase
             InvMenuHandler::register($this);
         }
         $this->initCore();
+        $this->getScheduler()->scheduleRepeatingTask(new ScoreboardTask(), 40);
     }
 
 
