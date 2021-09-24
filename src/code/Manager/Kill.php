@@ -3,12 +3,7 @@
 namespace code\Manager;
 
 use code\FuzePVP;
-use jasonwynn10\ScoreboardAPI\ScoreboardAPI;
-use jasonwynn10\ScoreboardAPI\ScoreboardEntry;
-use onebone\economyapi\EconomyAPI;
 use pocketmine\Player;
-use pocketmine\plugin\PluginBase;
-use pocketmine\Server;
 use pocketmine\utils\Config;
 
 final class Kill

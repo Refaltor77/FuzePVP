@@ -2,6 +2,7 @@
 
 namespace code;
 
+use code\Lib\muqsit\invmenu\InvMenuHandler;
 use pocketmine\plugin\PluginBase;
 
 class FuzePVP extends PluginBase
@@ -12,8 +13,12 @@ class FuzePVP extends PluginBase
 
     public function  onEnable(): void
     {
+        if(!InvMenuHandler::isRegistered()){
+            InvMenuHandler::register($this);
+        }
         $this->initCore();
     }
+
 
     public function onLoad(): void
     {
