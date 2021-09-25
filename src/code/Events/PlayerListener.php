@@ -138,7 +138,7 @@ class PlayerListener implements Listener
                     $combo = $this->combo[$damager->getXuid()][0];
                     $color = self::COLOR[array_rand()];
                     $damager->getLevel()->addSound(new BlazeShootSound(), [$damager]);
-                    $damager->sendPopup($color . " X" . $combo);
+                    $damager->sendPopup($color . " X" . $combo);
                     $combo++;
                     $this->combo[$damager->getXuid()] = [$combo, time() + 2];
                 } else {
@@ -150,7 +150,7 @@ class PlayerListener implements Listener
             } else {
                 $color = self::COLOR[array_rand()];
                 $damager->getLevel()->addSound(new BlazeShootSound(), [$damager]);
-                $damager->sendPopup($combo . "COMBOOOOOOOO");
+                $damager->sendPopup($combo . "COMBOOOOOOOO ");
                 $this->combo[$damager->getXuid()] = [1, time() + 2];
             }
         }
